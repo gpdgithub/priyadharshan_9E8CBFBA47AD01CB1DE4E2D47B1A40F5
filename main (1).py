@@ -1,10 +1,22 @@
-def leapyear(n):
-  if (n%4==0 or n%400==0):
-       print(n,"is a leap year")
-  else:
-       print(n,"is not a leap year")
+# Define the Player class
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
 
-year=int(input("Enter a year :"))
-result=leapyear(year)
+# Define the Batsman class, derived from Player
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
 
-     
+# Define the Bowler class, derived from Player
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
+
+# Create objects of Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
+
+# Call the play() method for each object
+batsman.play()
+bowler.play()
